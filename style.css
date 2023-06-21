@@ -47,6 +47,7 @@ body, html{
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
+    user-select: none;
 }
 .navbar h1{
     font-size: 2.5em;
@@ -80,7 +81,6 @@ li::after {
 .minus{
     color: #f2f2f2;
     cursor: pointer;
-    user-select: none;
 }
 .plus:hover::after,
 .minus:hover::after,
@@ -95,6 +95,9 @@ li::after {
 .high-contrast{
   color: yellow;
 }
+.high-contrast .content #pauseButton{
+  color: yellow;
+}
 .high-contrast .plus,
 .high-contrast .minus,
 .high-contrast .navbar a,
@@ -102,7 +105,8 @@ li::after {
 .high-contrast .contrast{
 color: yellow;
 }
-.high-contrast .content .btn1 {
+.high-contrast .content .btn1
+ {
   background-color: #000;
   border: 0;
   color: yellow;
@@ -150,6 +154,18 @@ a{
     object-fit: cover;
   }
   
+  #pauseButton {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+  }
+
   .content {
     position: relative;
     z-index: 1;
@@ -161,13 +177,14 @@ a{
     color: #fff;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
+    user-select: none;
   }
   
   .content h1 {
     font-size: 5em;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  
   }
   
   .content p {
@@ -213,11 +230,11 @@ a{
   }
   
   .projects h2 {
+    user-select: none;
     font-size: 5em;
     text-align: center;
     color: #f2f2f2;
-
-  }
+}
   
   .gallery {
     display: grid;
@@ -252,6 +269,7 @@ a{
   
   .contact h2 {
     font-size: 2em;
+    user-select: none;
     justify-content: center;
     color: #f2f2f2;
     margin-bottom: 20px;

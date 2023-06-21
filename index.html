@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Special Place</title>
+  <script src="https://kit.fontawesome.com/0b5a0c8faa.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <navbar class="navbar">
@@ -22,14 +23,16 @@
       </ul>
     </navbar>
     <section class="head">
-      <video class="video-bg" src="video.mp4" autoplay loop muted ></video>
+      <video id="video-bg" class="video-bg" src="video.mp4" autoplay loop muted></video>
       <div class="content">
         <h1>Welcome to our page!</h1>
         <p>This page just shows functionality.</p>
         <a href="#myTable">
         <button class="btn1">Redirect to see functions</button>
       </a>
+      <button id="pauseButton"><i  id="pause-button" class="fa-solid fa-pause"></i></button>
       </div>
+      
     </section>    
     <div class="line"></div>
     <section class="projects" id="projects">
@@ -95,7 +98,7 @@
           <tr>
             <td>Special Place</td>
             <td>index.html</td>
-            <td id="special">form, contrast, navbar, sections, video, font-resize, table</td>
+            <td id="special">form, contrast, navbar, sections, video, font-resize, table, controls, input</td>
           </tr>
         </table>
     </section>

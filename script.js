@@ -26,8 +26,24 @@ function decreaseFontSize() {
   }
 }
 
+var video = document.getElementById("video-bg"); // Pobierz element odtwarzacza wideo
+var pauseButton = document.getElementById("pauseButton"); // Pobierz przycisk pauzy
+var pauseIcon = document.getElementById("pause-button");
+
+// Dodaj obsługę kliknięcia przycisku pauzy
+pauseButton.addEventListener("click", function() {
+  if (video.paused) {
+    video.play(); // Jeśli wideo jest zatrzymane, uruchom odtwarzanie
+    pauseIcon.classList.remove("fa-play")
+    pauseIcon.classList.add("fa-pause") // Zmień ikonę na przycisku na ikonę pauzy
+  } else {
+    video.pause(); // Jeśli wideo jest odtwarzane, zatrzymaj odtwarzanie
+    pauseIcon.classList.remove("fa-pause")
+    pauseIcon.classList.add("fa-play") // Zmień ikonę na przycisku na ikonę odtwarzania (play)
+  }
+});
+
 function toggleContrast() {
-  // Dodaj/Usuń klasę high-contrast na elementach, aby zmienić style
   body.classList.toggle('high-contrast');
   headings.forEach((heading) => heading.classList.toggle('high-contrast'));
   paragraphs.forEach((paragraph) => paragraph.classList.toggle('high-contrast'));
@@ -46,7 +62,6 @@ function toggleContrast() {
         contrastElement.addEventListener('click', toggleContrast);
 
         function toggleContrast() {
-            // Dodaj/Usuń klasę high-contrast na elementach, aby zmienić style
             body.classList.toggle('high-contrast');
             headings.forEach((heading) => heading.classList.toggle('high-contrast'));
             paragraphs.forEach((paragraph) => paragraph.classList.toggle('high-contrast'));
